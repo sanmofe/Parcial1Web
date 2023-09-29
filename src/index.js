@@ -5,16 +5,30 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import { Navbar } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
+import CafesLista from './cafes/CafesLista';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import Login from './formulario/Login';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Navbar>
+      <Navbar.Brand href="#home">El aroma mágico</Navbar.Brand>
+    </Navbar>
+    <img src="https://previews.123rf.com/images/stepanpopov/stepanpopov1604/stepanpopov160400001/55067072-coffee-beans-spilling-out-of-burlap-bag-close-up.jpg" 
+    style={{width: "1244px", height: "323px", marginLeft:"98px"}} />
+    <BrowserRouter>
+       <Routes>
+         <Route path="/" element={<Login />} />
+         <Route path="/cafes" element={<CafesLista />} />
+       </Routes>
+     </BrowserRouter>
   </React.StrictMode>
 );
 
