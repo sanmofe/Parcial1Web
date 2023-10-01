@@ -1,0 +1,16 @@
+{
+    "notas": "Notas",
+    "sabores": "Panela, durazno, caramelo",
+    "altura": "Cultivado a una altura de ",
+    "msnm": "msnm",
+    "nombre": "Nombre",
+    "tipo": "Tipo",
+    "region": "Región",
+    "contacto": "Contáctanos: +57 3102105253 - info@elaromamagico.com - @elaromamagico",
+    "inicioSesion": "Inicio de sesión",
+    "nombreUsuario": "Nombre de usuario",
+    "contrasena": "Contraseña",
+    "ingresar": "Ingresar",
+    "cancelar": "Cancelar",
+    "errorAutenticacion": "Error de autenticación. Revise sus credenciales."
+}

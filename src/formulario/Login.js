@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { Card, Container } from "react-bootstrap";
 import "./login.css"
 import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 function Login() {
 
@@ -35,10 +36,10 @@ function Login() {
             if(data.status === "error"){
                 setValidationStates({ ...validationStates, passwordState: false });
                 setValidationStates({ ...validationStates, emailState: false });
-                navigate("/cafes");
             }else{
                 setValidationStates({ ...validationStates, passwordState: true });
                 setValidationStates({ ...validationStates, emailState: true });
+                navigate("/cafes");
             }
             
         })
@@ -48,13 +49,12 @@ function Login() {
   
 
   return (
-    <Card style={{width: "50vw"}}>
+    <Card style={{width: "881px", marginLeft: "18%", marginTop:"15px"}}>
     <Form>
       <Form.Group className="mb-6" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label><FormattedMessage id="nombreUsuario"></FormattedMessage></Form.Label>
         <Form.Control
           type="email"
-          placeholder="Enter email"
           isInvalid={!validationStates.emailState}
           onChange={handleEmailChange}
           value={formValues.email}
@@ -62,22 +62,21 @@ function Login() {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label><FormattedMessage id="contrasena"></FormattedMessage></Form.Label>
         <Form.Control
           type="password"
-          placeholder="Password"
           onChange={handlePasswordChange}
           value={formValues.password}
-          isInvalid={!validationStates.passwordState}
+          isInvalid={!validationStates.emailState}
         />
       </Form.Group>
       { !validationStates.emailState && <Form.Text className="text-muted">Error de autenticación, revise sus credenciales</Form.Text>}
       <Container>
       <Button variant="primary" onClick={clickSubmit}>
-        Submit
+        <FormattedMessage id="ingresar"></FormattedMessage>
       </Button>
       <Button variant="danger" >
-        Cancel
+        <FormattedMessage id="cancelar"></FormattedMessage>
       </Button>
       </Container>
     </Form>

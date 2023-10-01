@@ -1,0 +1,16 @@
+{
+    "notas": "Notes",
+    "sabores": "Panela, peach, caramel",
+    "altura": "Grown at an altitude of",
+    "msnm": "meters above sea level",
+    "nombre": "Name",
+    "tipo": "Type",
+    "region": "Region",
+    "contacto": "Contact Us: +57 3102105253 - info@elaromamagico.com - @elaromamagico",
+    "inicioSesion": "Log In",
+    "nombreUsuario": "Username",
+    "contrasena": "Password",
+    "ingresar": "Log In",
+    "cancelar": "Cancel",
+    "errorAutenticacion": "Authentication error. Please check your credentials."
+}
